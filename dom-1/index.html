@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Event</title>
+  </head>
+  <body style="text-align: center;">
+    <h1 style="color: rgb(188, 13, 13)">DOM ar aska special Event</h1>
+    <!-- num-1 -->
+    <button onclick="document.body.style.backgroundColor='black'">
+      Click- me
+    </button>
+    <!-- num-2 -->
+    <button onclick="makeRed()">Click</button>
+    <!-- num-3 -->
+    <button id="Make-blue">Blue</button>
+    <!-- num-4 -->
+    <button id="make-purple">Purple</button>
+    <!-- num-5 -->
+    <button id="make-pink">Pink</button>
+    <!-- num-6 -->
+    <button id="make-green">Make Green</button>
+    <!-- num-7 -->
+    <button id="make-golden">Make Golden</button>
+
+    <!-- js -->
+    <script src="index.js"></script>
+    <script>
+      // num-2
+      function makeRed() {
+        document.body.style.backgroundColor = "red";
+      }
+    </script>
+    <script>
+      // num-3
+      const makeBlueButton = document.getElementById("Make-blue");
+      makeBlueButton.onclick = makeBlue;
+
+      function makeBlue() {
+        document.body.style.backgroundColor = "blue";
+      }
+      // num-4[*** uses in anytime]
+      const PurpoleButton = document.getElementById('make-purple');
+      PurpoleButton.onclick = function makePurplle(){
+        document.body.style.backgroundColor = 'purple';
+      }
+      // num-5
+      const pinkButton= document.getElementById('make-pink');
+      pinkButton.addEventListener('click', makePink)
+
+      function makePink(){
+        document.body.style.backgroundColor = 'pink';
+      }
+      // num-6
+      const makeGreenButton = document.getElementById('make-green');
+      makeGreenButton.addEventListener('click',function (){
+        document.body.style.backgroundColor= 'green';
+      })
+    </script>
+  </body>
+</html>
